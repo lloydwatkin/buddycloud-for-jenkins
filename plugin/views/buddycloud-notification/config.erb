@@ -1,0 +1,55 @@
+b("/lib/form")
+   f.block do
+%>
+    <table style="margin-left: 30px;">
+      <%
+         f.entry :title => 'API Base URL',
+                 :field => :api_base_url,
+                 :description => 'Base URL for API (for ending slash).' do
+           f.textbox :clazz => 'required', :default => '${BUDDYCLOUD_API_BASE_URL}'
+         end
+
+         f.entry :title => 'Username',
+                 :field => :username,
+                 :description => 'Username.' do
+           f.textbox :clazz => 'required', :default => '${BUDDYCLOUD_USERNAME}'
+         end
+
+         f.entry :title => 'Password',
+                 :field => :password,
+                 :description => 'Password.' do
+           f.textbox :clazz => 'required', :default => '${BUDDYCLOUD_PASSWORD}'
+         end
+
+         f.entry :title => 'Channel',
+                 :field => :channel,
+                 :description => 'The channel to post to.' do
+           f.textbox :clazz => 'required', :default => '${BUDDYCLOUD_CHANNEL}'
+         end
+
+         f.optionalBlock :title => 'Send success notifications',
+                         :field => :send_success_notifications,
+                         :inline => true do
+           f.entry :title => 'Message',
+                   :field => :success_message,
+                   :description => 'The message to post when the build finishes with a status of SUCCESS.' do
+             f.textarea :clazz => 'required', :default => '${JOB_NAME} #${BUILD_NUMBER} SUCCESS'
+           end
+
+         end
+
+         f.optionalBlock :title => 'Send failure notifications',
+                         :field => :send_failure_notifications,
+                         :inline => true do
+           f.entry :title => 'Message',
+                   :field => :failure_message,
+                   :description => 'The message to post when the build finishes with a status OTHER THAN SUCCESS.' do
+             f.textarea :clazz => 'required', :default => '${JOB_NAME} #${BUILD_NUMBER} FAILURE'
+           end
+
+         end
+
+      %></table>
+<%
+   end
+%>
