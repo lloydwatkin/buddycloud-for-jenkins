@@ -18,6 +18,7 @@ Enter an API base URL (e.g. https://api.buddycloud.org - __no ending slash__), a
 
 * Add the ability to update a channels status line depending on the status of the last build
 * Add example messages
+* Add some images to README.md
 
 ## Feedback
 
