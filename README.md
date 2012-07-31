@@ -6,7 +6,15 @@ The success and fail messages can be customised for each project.
 
 ## Installation
 
-I am currently adding one last feature and then I shall make available via the standard Jenkins CI plugin system
+Install the plugin from the Jenkins Plugin Manager. It should be listed as __Buddycloud Plugin__ under __Build Notifiers__.
+
+### Manual Install
+
+* Install the ruby-runtime plugin.
+* Install the Token Macro Plugin. It may already be installed.
+* Download the latest Buddycloud Plugin .hpi file from: http://maven.jenkins-ci.org/content/repositories/releases/org/jenkins-ci/ruby-plugins/buddycloud.
+* Upload the .hpi file into Jenkins from Plugin Manager > Advanced.
+* Restart Jenkins.
 
 ## Enable Buddycloud notifications
 
@@ -26,4 +34,5 @@ To [raise an issue](https://github.com/lloydwatkin/buddycloud-for-jenkins/issues
 
 ## Notes
 
+For more information on the Buddycloud HTTP API please see https://buddycloud.org/wiki/Buddycloud_HTTP_API.
 Inspiration from https://github.com/mattriley/yammer-plugin-for-jenkins

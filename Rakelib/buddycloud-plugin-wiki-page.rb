@@ -1,7 +1,7 @@
 require 'erb'
 require File.expand_path(File.dirname(__FILE__) + '/confluence')
 
-class YammerPluginWikiPage
+class BuddycloudPluginWikiPage
 
   def post(username, password)
     confluence = Confluence.new
@@ -17,7 +17,7 @@ class YammerPluginWikiPage
   end
 
   def readme_as_wiki
-    `markdown2confluence readme.md`
+    `markdown2confluence README.md`
   end
 
   def template_as_text

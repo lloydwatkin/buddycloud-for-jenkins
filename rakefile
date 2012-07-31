@@ -19,7 +19,7 @@ task :update_jenkins_ci_wiki do
   password = ENV['JENKINS_PASSWORD']
   raise 'JENKINS_USERNAME is required.' unless username
   raise 'JENKINS_PASSWORD is required.' unless password
-  wiki_page = YammerPluginWikiPage.new
+  wiki_page = BuddycloudPluginWikiPage.new
   wiki_page.post username, password
 end
 

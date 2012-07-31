@@ -33,7 +33,7 @@
                          :inline => true do
            f.entry :title => 'Message',
                    :field => :success_message,
-                   :description => 'The message to post when the build finishes with a status of SUCCESS.' do
+                   :description => 'The message to post when the build is successful.' do
              f.textarea :clazz => 'required', :default => '${JOB_NAME} #${BUILD_NUMBER} SUCCESS'
            end
 
@@ -44,7 +44,7 @@
                          :inline => true do
            f.entry :title => 'Message',
                    :field => :failure_message,
-                   :description => 'The message to post when the build finishes with a status OTHER THAN SUCCESS.' do
+                   :description => 'The message to post when the build fails.' do
              f.textarea :clazz => 'required', :default => '${JOB_NAME} #${BUILD_NUMBER} FAILURE'
            end
 
