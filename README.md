@@ -22,6 +22,8 @@ In the job configuration, under Post-build actions, select __Buddycloud Notifica
 
 Enter an API base URL (e.g. https://api.buddycloud.org - __no ending slash__), a valid username and password, and the channel to wish you want the posts to go. Note: The user must have post rights to that channel.
 
+You can also update the status message of a channel dependent on build success, you must have write permission to this node also.
+
 ## Todo
 
 * Add the ability to update a channels status line depending on the status of the last build
