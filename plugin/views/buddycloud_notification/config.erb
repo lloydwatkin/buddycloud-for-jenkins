@@ -50,6 +50,20 @@
 
          end
 
+         f.optionalBlock :title => 'Update channel status on notification',
+                         :field => :send_status_update,
+                         :inline => true do
+           f.entry :title => 'Success message',
+                   :field => :success_status_message,
+                   :description => 'Status to give channel when build is successful' do
+             f.textarea :clazz => 'required', :default => '${JOB_NAME} is building just fine'
+           end
+           f.entry :title => 'Failure message',
+                   :field => :failure_status_message,
+                   :description => 'Status to give channel when build fails' do
+             f.textarea :clazz => 'required', :default => '${JOB_NAME} BUILD FAILURE'
+           end
+         end
       %></table>
 <%
    end
