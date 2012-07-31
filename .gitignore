@@ -3,3 +3,5 @@ pkg
 test
 work
 Gemfile.lock
+.project
+.settings
