@@ -1,9 +1,9 @@
-ns::Plugin::Specification.new do |plugin|
+Jenkins::Plugin::Specification.new do |plugin|
 
   plugin.name = 'buddycloud'
   plugin.display_name = 'Buddycloud Plugin'
   plugin.version = '0.1.0'
-  plugin.description = 'Sends build notifications to aBuddycloud instance.'
+  plugin.description = 'Sends build notifications to a Buddycloud instance.'
 
   # You should create a wiki-page for your plugin when you publish it, see
   # https://wiki.jenkins-ci.org/display/JENKINS/Hosting+Plugins#HostingPlugins-AddingaWikipage

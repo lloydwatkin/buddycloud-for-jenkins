@@ -1,4 +1,5 @@
 require 'rest-client'
+require 'nokogiri'
 require_relative 'buffered-io-patch'
 
 class Buddycloud
@@ -14,8 +15,11 @@ class Buddycloud
 
   def send_message(message)
     check_required_fields message: message
-    response = access_token.post 'https://www.yammer.com/api/v1/messages.json', {:body => message, :group_id => group_id}
-    post =
+    entry = Nokogiri::XML::Builder.new do |xml|
+      xml.entry(:xmlns => 'http://www.w3.org/2005/Atom') {
+        xml.content message
+      }
+    end
 
     headers = { :accept => 'application/xml+atom', :content_type => :xml }
     headers['X-Session-Id'] = @session if defined? @session
@@ -25,7 +29,8 @@ class Buddycloud
         :url      => @url + 'posts',
         :user     => @username,
         :password => @password,
-        :headers  => headers
+        :headers  => headers,
+        :payload  => entry.to_xml(:save_with => Nokogiri::XML::Node::SaveOptions::NO_DECLARATION)
     )
     response = request.execute
     @session = response.headers['X-Session-Id'] if defined? response.headers['X-Session-Id']
