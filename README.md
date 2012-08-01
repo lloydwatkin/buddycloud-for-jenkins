@@ -38,3 +38,11 @@ To [raise an issue](https://github.com/lloydwatkin/buddycloud-for-jenkins/issues
 
 For more information on the buddycloud HTTP API please see https://buddycloud.org/wiki/Buddycloud_HTTP_API.
 Inspiration from https://github.com/mattriley/yammer-plugin-for-jenkins
+
+## Version 
+
+* 0.2.0
+** Update to new API end points https://buddycloud.org/wiki/Buddycloud_HTTP_API#API_Endpoints
+** %s/Buddycloud/buddycloud/g https://github.com/lloydwatkin/buddycloud-for-jenkins/issues/1
+* 0.1.0
+** Initial working version
