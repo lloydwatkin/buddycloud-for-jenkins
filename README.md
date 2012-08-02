@@ -41,8 +41,10 @@ Inspiration from https://github.com/mattriley/yammer-plugin-for-jenkins
 
 ## Version 
 
-* 0.2.0
+* __0.2.1__
+  * Fixed endpoint
+* __0.2.0__
   * Update to new API end points https://buddycloud.org/wiki/Buddycloud_HTTP_API#API_Endpoints
   * %s/Buddycloud/buddycloud/g https://github.com/lloydwatkin/buddycloud-for-jenkins/issues/1
-* 0.1.0
+* __0.1.0__
   * Initial working version

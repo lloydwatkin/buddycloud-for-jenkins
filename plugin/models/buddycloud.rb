@@ -10,7 +10,7 @@ class Buddycloud
     @username     = username
     @password     = password
     @channel      = channel
-    @url          = @api_base_url + '/' + @channel + '/';
+    @url          = @api_base_url + '/' + @channel + '/content/';
   end
 
   def send_message(message, status_message)
