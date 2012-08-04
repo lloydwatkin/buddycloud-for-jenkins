@@ -41,8 +41,15 @@ Inspiration from https://github.com/mattriley/yammer-plugin-for-jenkins
 
 ## Version 
 
+* __0.2.3__
+  * Bundled nokogiri
+  * Bugs fixed from deployment to a third party server
+* __0.2.2__
+  * Update to support latest Jenkins instance
+  * Nokogiri not bundled do not use
 * __0.2.1__
   * Fixed endpoint
+  * Nokogiri not bundled do not use
 * __0.2.0__
   * Update to new API end points https://buddycloud.org/wiki/Buddycloud_HTTP_API#API_Endpoints
   * %s/Buddycloud/buddycloud/g https://github.com/lloydwatkin/buddycloud-for-jenkins/issues/1

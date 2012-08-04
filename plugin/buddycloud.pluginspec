@@ -3,7 +3,7 @@ Jenkins::Plugin::Specification.new do |plugin|
 
   plugin.name = 'buddycloud'
   plugin.display_name = 'buddycloud Plugin'
-  plugin.version = '0.2.1'
+  plugin.version = '0.2.3'
   plugin.description = 'Sends build notifications to a buddycloud instance.'
 
   # You should create a wiki-page for your plugin when you publish it, see
