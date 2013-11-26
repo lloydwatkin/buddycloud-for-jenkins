@@ -55,3 +55,7 @@ Inspiration from https://github.com/mattriley/yammer-plugin-for-jenkins
     * %s/Buddycloud/buddycloud/g https://github.com/lloydwatkin/buddycloud-for-jenkins/issues/1
 * __0.1.0__
     * Initial working version
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/lloydwatkin/buddycloud-for-jenkins/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
