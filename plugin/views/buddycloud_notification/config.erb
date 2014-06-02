@@ -39,6 +39,17 @@
 
          end
 
+         f.optionalBlock :title => 'Send unstable notifications',
+                         :field => :send_unstable_notifications,
+                         :inline => true do
+           f.entry :title => 'Message',
+                   :field => :unstable_message,
+                   :description => 'The message to post when the build is unstable.' do
+             f.textarea :clazz => 'required', :default => '${JOB_NAME} #${BUILD_NUMBER} UNSTABLE'
+           end
+
+         end
+
          f.optionalBlock :title => 'Send failure notifications',
                          :field => :send_failure_notifications,
                          :inline => true do
@@ -57,6 +68,11 @@
                    :field => :success_status_message,
                    :description => 'Status to give channel when build is successful' do
              f.textarea :clazz => 'required', :default => '${JOB_NAME} is building just fine'
+           end
+           f.entry :title => 'Unstable message',
+                   :field => :unstable_status_message,
+                   :description => 'Status to give channel when build is unstable' do
+             f.textarea :clazz => 'required', :default => '${JOB_NAME} BUILD UNSTABLE'
            end
            f.entry :title => 'Failure message',
                    :field => :failure_status_message,

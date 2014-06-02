@@ -41,6 +41,8 @@ Inspiration from https://github.com/mattriley/yammer-plugin-for-jenkins
 
 ## Version 
 
+* __0.3.0__
+    * Added support for unstable build notifications
 * __0.2.3__
     * Bundled nokogiri
     * Bugs fixed from deployment to a third party server

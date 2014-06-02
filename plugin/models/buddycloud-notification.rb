@@ -4,8 +4,9 @@ class BuddycloudNotification < Jenkins::Tasks::Publisher
 
   attr_reader :api_base_url, :username, :password, :channel,
               :send_success_notifications, :success_message,
+              :send_unstable_notifications, :unstable_message,
               :send_failure_notifications, :failure_message,
-              :send_status_update, :success_status_message, :failure_status_message
+              :send_status_update, :success_status_message, :unstable_status_message, :failure_status_message
 
   display_name 'buddycloud Notification'
 
