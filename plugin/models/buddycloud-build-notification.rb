@@ -37,15 +37,16 @@ class BuddycloudBuildNotification
 
   def send_notification
 
-    load_messages
+    messages = load_messages
     
     buddycloud = Buddycloud.new api_base_url, username, password, channel
 
     unless should_update_status?
-      buddycloud.send_message notification_message, nil
+      buddycloud.send_message messages['notification_message'], nil
     else    
-      buddycloud.send_message notification_message, status_message 
+      buddycloud.send_message messages['notification_message'], messages['status_message']
     end
+    
   end
 
   private
@@ -59,20 +60,26 @@ class BuddycloudBuildNotification
   end
 
   def load_messages
+    
+    messages = {}
+    
     case @build.native.getResult.to_s
     when 'SUCCESS'
-      notification_message =  success_message
-      status_message = success_status_message
+      messages['notification_message'] = success_message
+      messages['status_message'] = success_status_message
     when 'UNSTABLE'
-      notification_message = unstable_message
-      status_message = unstable_status_message
+      messages['notification_message'] = unstable_message
+      messages['status_message'] = unstable_status_message
     when 'FAILURE'
-      notification_message = failure_message
-      status_message = failure_status_message
+      messages['notification_message'] = failure_message
+      messages['status_message'] = failure_status_message
     else
-      notification_message = ''
-      status_message = ''
+      messages['notification_message'] = ''
+      messages['status_message'] = ''
     end
+    
+    return messages
+    
   end
 
 end
