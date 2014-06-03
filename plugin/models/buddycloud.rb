@@ -32,7 +32,7 @@ class Buddycloud
   end
   
   def make_request(entry, node)
-    headers = { :accept => 'application/xml+atom', :content_type => :xml }
+    headers = { :accept => 'application/atom+xml', :content_type => :xml }
     headers['X-Session-Id'] = @session if defined? @session
 
     request = RestClient::Request.new(
