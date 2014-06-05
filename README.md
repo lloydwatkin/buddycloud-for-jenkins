@@ -1,6 +1,6 @@
 # buddycloud for Jenkins
 
-This buddycloud (http://www.buddycloud.org) plugin for Jenkins CI (http://jenkinsci.org) enables notifcation to be sent to a buddycloud channel on the success or failure of a build.
+This buddycloud (http://www.buddycloud.org) plugin for Jenkins CI (http://jenkinsci.org) enables notifcation to be sent to a buddycloud channel on the success and failure of a build or to notify of an unstable build.
 
 The success and fail messages can be customised for each project.
 
